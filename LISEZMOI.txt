@@ -17,7 +17,8 @@ Ce qui remplace le JavaScript (CSS uniquement)
 - Menu « Produits » : s'ouvre au survol ; menu mobile : bouton ☰ (case à cocher cachée)
 - Galerie photo des fiches : clic sur les miniatures
 - Choix longueur / quantité / options : prix et récapitulatif mis à jour en CSS
-- Bouton « Commander » : ouvre la fenêtre de commande (ancre #commander)
+- Fiches produit : consultation des prix uniquement ; « Commander » et « Ajouter au panier »
+  mènent au panier, puis « Passer commande » mène à la page Commande (seul formulaire de commande)
 - Livraison estimée : selon le pays, le code postal et la quantité
 - Catalogue : filtres, tri, « Afficher plus », « Effacer les filtres », nombre de résultats
 
