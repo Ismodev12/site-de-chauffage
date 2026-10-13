@@ -247,7 +247,12 @@
             >
               <path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h9.2a1 1 0 0 0 1-.8L20 8H6.2"></path>
               <circle cx="9" cy="20" r="1.3"></circle>
-              <circle cx="17" cy="20" r="1.3"></circle></svg></a
+              <circle cx="17" cy="20" r="1.3"></circle></svg
+            ><span
+              data-panier-compteur="true"
+              hidden=""
+              class="absolute right-1 top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-ember-600 px-1 text-xs font-bold text-white"
+            ></span></a
           ><label
             for="menu-mobile-toggle"
             class="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full text-bark-900 hover:bg-cream-200 lg:hidden"
@@ -666,7 +671,10 @@
           </p>
           <p class="mt-2 text-bark-800">À partir de <strong class="text-xl">3,09 €</strong> / filet</p>
           <div class="mt-6">
-            <div class="nojs-order">
+            <div
+              class="nojs-order"
+              data-panier-produit='{"slug":"bois-d-allumage-petit-bois","name":"Bois d’allumage (petit bois)","image":"/images/catalogue/petit-bois-feu.jpg","kind":"unit","axes":["Conditionnement"],"variants":[{"id":"filet","options":{"Conditionnement":"Filet"},"label":"Filet","price":3.09,"unit":{"singulier":"filet","pluriel":"filets"},"steres":null},{"id":"lot-de-50-filets","options":{"Conditionnement":"Lot de 50 filets"},"label":"Lot de 50 filets","price":341.9,"unit":{"singulier":"lot","pluriel":"lots"},"steres":null},{"id":"palette-de-80-filets-de-40-l","options":{"Conditionnement":"Palette de 80 filets de 40 L"},"label":"Palette de 80 filets de 40 L","price":516.9,"unit":{"singulier":"palette","pluriel":"palettes"},"steres":null},{"id":"palette-de-80-filets-de-25-dm","options":{"Conditionnement":"Palette de 80 filets de 25 dm³"},"label":"Palette de 80 filets de 25 dm³","price":516.9,"unit":{"singulier":"palette","pluriel":"palettes"},"steres":null}]}'
+            >
               <style>
                 .nojs-combo,
                 .nojs-label-variant {
@@ -730,6 +738,8 @@
                       ><input
                         type="radio"
                         id="sel-option-0-0"
+                        data-axe="Conditionnement"
+                        data-valeur="Filet"
                         class="sr-only"
                         name="option-1"
                         checked=""
@@ -740,6 +750,8 @@
                       ><input
                         type="radio"
                         id="sel-option-0-1"
+                        data-axe="Conditionnement"
+                        data-valeur="Lot de 50 filets"
                         class="sr-only"
                         name="option-1"
                         value="Conditionnement : Lot de 50 filets"
@@ -749,6 +761,8 @@
                       ><input
                         type="radio"
                         id="sel-option-0-2"
+                        data-axe="Conditionnement"
+                        data-valeur="Palette de 80 filets de 40 L"
                         class="sr-only"
                         name="option-1"
                         value="Conditionnement : Palette de 80 filets de 40 L"
@@ -758,6 +772,8 @@
                       ><input
                         type="radio"
                         id="sel-option-0-3"
+                        data-axe="Conditionnement"
+                        data-valeur="Palette de 80 filets de 25 dm³"
                         class="sr-only"
                         name="option-1"
                         value="Conditionnement : Palette de 80 filets de 25 dm³"
@@ -889,14 +905,21 @@
                   Cette combinaison n’est pas proposée : choisissez une autre option.
                 </p>
                 <div class="mt-5 grid gap-3">
-                  <a class="btn btn-primary w-full text-base" href="../panier.html"
+                  <a data-panier="commander" class="btn btn-primary w-full text-base" href="../panier.html"
                     ><span class="nojs-label-default">Commander</span
                     ><span class="nojs-label-variant nojs-label-nojs-v-0">Commander</span
                     ><span class="nojs-label-variant nojs-label-nojs-v-1">Commander</span
                     ><span class="nojs-label-variant nojs-label-nojs-v-2">Commander</span
                     ><span class="nojs-label-variant nojs-label-nojs-v-3">Commander</span></a
-                  ><a class="btn btn-outline w-full" href="../panier.html">Ajouter au panier</a>
+                  ><a data-panier="ajouter" class="btn btn-outline w-full" href="../panier.html">Ajouter au panier</a>
                 </div>
+                <p
+                  data-panier-confirmation="true"
+                  hidden=""
+                  class="mt-4 rounded-lg bg-forest-50 p-4 text-sm font-medium text-forest-800"
+                >
+                  Ajouté au panier. <a class="font-semibold underline" href="../panier.html">Voir le panier</a>
+                </p>
               </div>
             </div>
           </div>
@@ -1407,5 +1430,6 @@
         ></path></svg
       ><span class="hidden text-sm font-semibold md:inline">WhatsApp</span></a
     >
+    <script src="../js/panier.js" defer></script>
   </body>
 </html>

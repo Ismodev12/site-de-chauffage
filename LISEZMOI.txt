@@ -9,16 +9,19 @@ Contenu
 - images/ : toutes les photos
 - robots.txt, sitemap.xml, 404.html
 
-Aucun fichier JavaScript. Les seules balises <script> restantes sont de type
-"application/ld+json" : ce sont des données pour Google (référencement), elles
-ne s'exécutent pas.
+Un seul fichier JavaScript : js/panier.js (le panier). Il mémorise les produits
+choisis dans le navigateur du client. Tout le reste est en HTML / CSS.
+Les balises <script type="application/ld+json"> sont des données pour Google
+(référencement), elles ne s'exécutent pas.
 
 Ce qui remplace le JavaScript (CSS uniquement)
 - Menu « Produits » : s'ouvre au survol ; menu mobile : bouton ☰ (case à cocher cachée)
 - Galerie photo des fiches : clic sur les miniatures
 - Choix longueur / quantité / options : prix et récapitulatif mis à jour en CSS
-- Fiches produit : consultation des prix uniquement ; « Commander » et « Ajouter au panier »
-  mènent au panier, puis « Passer commande » mène à la page Commande (seul formulaire de commande)
+- Fiches produit : « Commander » ajoute le produit au panier et ouvre le panier ;
+  « Ajouter au panier » l'ajoute et reste sur la page (js/panier.js)
+- Panier : quantités, suppression, livraison, total ; « Passer commande » → page Commande,
+  qui envoie le contenu du panier (champs « panier » et « total ») puis affiche la page Merci
 - Livraison estimée : selon le pays, le code postal et la quantité
 - Catalogue : filtres, tri, « Afficher plus », « Effacer les filtres », nombre de résultats
 

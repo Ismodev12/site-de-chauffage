@@ -258,7 +258,12 @@
             >
               <path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h9.2a1 1 0 0 0 1-.8L20 8H6.2"></path>
               <circle cx="9" cy="20" r="1.3"></circle>
-              <circle cx="17" cy="20" r="1.3"></circle></svg></a
+              <circle cx="17" cy="20" r="1.3"></circle></svg
+            ><span
+              data-panier-compteur="true"
+              hidden=""
+              class="absolute right-1 top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-ember-600 px-1 text-xs font-bold text-white"
+            ></span></a
           ><label
             for="menu-mobile-toggle"
             class="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full text-bark-900 hover:bg-cream-200 lg:hidden"
@@ -675,7 +680,10 @@
           <p class="text-lg leading-relaxed text-bark-700">Granulés de bois pour poêles et chaudières à granulés.</p>
           <p class="mt-2 text-bark-800">À partir de <strong class="text-xl">6,09 €</strong> / sac</p>
           <div class="mt-6">
-            <div class="nojs-order">
+            <div
+              class="nojs-order"
+              data-panier-produit='{"slug":"granules-de-bois-6-mm-enplus-a1","name":"Granulés de bois 6 mm ENplus A1","image":"/images/catalogue/visuels/granules-de-bois-6-mm-enplus-a1.jpg","kind":"unit","axes":["Conditionnement"],"variants":[{"id":"sac-de-15-kg","options":{"Conditionnement":"Sac de 15 kg"},"label":"Sac de 15 kg","price":6.09,"unit":{"singulier":"sac","pluriel":"sacs"},"steres":null},{"id":"demi-palette-495-kg","options":{"Conditionnement":"Demi-palette (495 kg)"},"label":"Demi-palette (495 kg)","price":221.9,"unit":{"singulier":"demi-palette","pluriel":"demi-palettes"},"steres":null},{"id":"palette-990-kg","options":{"Conditionnement":"Palette (990 kg)"},"label":"Palette (990 kg)","price":409.9,"unit":{"singulier":"palette","pluriel":"palettes"},"steres":null},{"id":"lot-de-2-palettes","options":{"Conditionnement":"Lot de 2 palettes"},"label":"Lot de 2 palettes","price":797.9,"unit":{"singulier":"lot de 2 palettes","pluriel":"lots de 2 palettes"},"steres":null}]}'
+            >
               <style>
                 .nojs-combo,
                 .nojs-label-variant {
@@ -739,6 +747,8 @@
                       ><input
                         type="radio"
                         id="sel-option-0-0"
+                        data-axe="Conditionnement"
+                        data-valeur="Sac de 15 kg"
                         class="sr-only"
                         name="option-1"
                         checked=""
@@ -749,6 +759,8 @@
                       ><input
                         type="radio"
                         id="sel-option-0-1"
+                        data-axe="Conditionnement"
+                        data-valeur="Demi-palette (495 kg)"
                         class="sr-only"
                         name="option-1"
                         value="Conditionnement : Demi-palette (495 kg)"
@@ -758,6 +770,8 @@
                       ><input
                         type="radio"
                         id="sel-option-0-2"
+                        data-axe="Conditionnement"
+                        data-valeur="Palette (990 kg)"
                         class="sr-only"
                         name="option-1"
                         value="Conditionnement : Palette (990 kg)"
@@ -767,6 +781,8 @@
                       ><input
                         type="radio"
                         id="sel-option-0-3"
+                        data-axe="Conditionnement"
+                        data-valeur="Lot de 2 palettes"
                         class="sr-only"
                         name="option-1"
                         value="Conditionnement : Lot de 2 palettes"
@@ -898,14 +914,21 @@
                   Cette combinaison n’est pas proposée : choisissez une autre option.
                 </p>
                 <div class="mt-5 grid gap-3">
-                  <a class="btn btn-primary w-full text-base" href="../panier.html"
+                  <a data-panier="commander" class="btn btn-primary w-full text-base" href="../panier.html"
                     ><span class="nojs-label-default">Commander</span
                     ><span class="nojs-label-variant nojs-label-nojs-v-0">Commander</span
                     ><span class="nojs-label-variant nojs-label-nojs-v-1">Commander</span
                     ><span class="nojs-label-variant nojs-label-nojs-v-2">Commander</span
                     ><span class="nojs-label-variant nojs-label-nojs-v-3">Commander</span></a
-                  ><a class="btn btn-outline w-full" href="../panier.html">Ajouter au panier</a>
+                  ><a data-panier="ajouter" class="btn btn-outline w-full" href="../panier.html">Ajouter au panier</a>
                 </div>
+                <p
+                  data-panier-confirmation="true"
+                  hidden=""
+                  class="mt-4 rounded-lg bg-forest-50 p-4 text-sm font-medium text-forest-800"
+                >
+                  Ajouté au panier. <a class="font-semibold underline" href="../panier.html">Voir le panier</a>
+                </p>
               </div>
             </div>
           </div>
@@ -1421,5 +1444,6 @@
         ></path></svg
       ><span class="hidden text-sm font-semibold md:inline">WhatsApp</span></a
     >
+    <script src="../js/panier.js" defer></script>
   </body>
 </html>

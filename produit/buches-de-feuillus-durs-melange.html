@@ -247,7 +247,12 @@
             >
               <path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h9.2a1 1 0 0 0 1-.8L20 8H6.2"></path>
               <circle cx="9" cy="20" r="1.3"></circle>
-              <circle cx="17" cy="20" r="1.3"></circle></svg></a
+              <circle cx="17" cy="20" r="1.3"></circle></svg
+            ><span
+              data-panier-compteur="true"
+              hidden=""
+              class="absolute right-1 top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-ember-600 px-1 text-xs font-bold text-white"
+            ></span></a
           ><label
             for="menu-mobile-toggle"
             class="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full text-bark-900 hover:bg-cream-200 lg:hidden"
@@ -667,7 +672,10 @@
           </p>
           <p class="mt-2 text-bark-800">À partir de <strong class="text-xl">130,90 €</strong> / palette</p>
           <div class="mt-6">
-            <div class="nojs-order">
+            <div
+              class="nojs-order"
+              data-panier-produit='{"slug":"buches-de-feuillus-durs-melange","name":"Bûches de feuillus durs (mélange)","image":"/images/catalogue/buches-palette-filets.jpg","kind":"unit","axes":["Longueur","Conditionnement"],"variants":[{"id":"30-cm-lot-de-40-filets","options":{"Longueur":"30 cm","Conditionnement":"Lot de 40 filets"},"label":"30 cm · Lot de 40 filets","price":445.9,"unit":{"singulier":"lot","pluriel":"lots"},"steres":null},{"id":"1-m-palette-2-steres","options":{"Longueur":"1 m","Conditionnement":"Palette (2 stères)"},"label":"1 m · Palette (2 stères)","price":130.9,"unit":{"singulier":"palette","pluriel":"palettes"},"steres":2},{"id":"50-cm-palette-2-5-steres","options":{"Longueur":"50 cm","Conditionnement":"Palette (2,5 stères)"},"label":"50 cm · Palette (2,5 stères)","price":179.9,"unit":{"singulier":"palette","pluriel":"palettes"},"steres":2.5},{"id":"45-cm-palette-2-6-steres","options":{"Longueur":"45 cm","Conditionnement":"Palette (2,6 stères)"},"label":"45 cm · Palette (2,6 stères)","price":191.9,"unit":{"singulier":"palette","pluriel":"palettes"},"steres":2.6},{"id":"40-cm-palette-2-7-steres","options":{"Longueur":"40 cm","Conditionnement":"Palette (2,7 stères)"},"label":"40 cm · Palette (2,7 stères)","price":210.9,"unit":{"singulier":"palette","pluriel":"palettes"},"steres":2.7},{"id":"33-cm-palette-2-9-steres","options":{"Longueur":"33 cm","Conditionnement":"Palette (2,9 stères)"},"label":"33 cm · Palette (2,9 stères)","price":216.9,"unit":{"singulier":"palette","pluriel":"palettes"},"steres":2.9},{"id":"30-cm-palette-3-steres","options":{"Longueur":"30 cm","Conditionnement":"Palette (3 stères)"},"label":"30 cm · Palette (3 stères)","price":240.9,"unit":{"singulier":"palette","pluriel":"palettes"},"steres":3},{"id":"25-cm-palette-3-3-steres","options":{"Longueur":"25 cm","Conditionnement":"Palette (3,3 stères)"},"label":"25 cm · Palette (3,3 stères)","price":264.9,"unit":{"singulier":"palette","pluriel":"palettes"},"steres":3.3},{"id":"50-cm-vrac-4-steres","options":{"Longueur":"50 cm","Conditionnement":"Vrac — 4 stères"},"label":"50 cm · Vrac — 4 stères","price":300.9,"unit":{"singulier":"lot de 4 stères","pluriel":"lots de 4 stères"},"steres":4}]}'
+            >
               <style>
                 .nojs-combo,
                 .nojs-label-variant {
@@ -791,6 +799,8 @@
                       ><input
                         type="radio"
                         id="sel-option-0-0"
+                        data-axe="Longueur"
+                        data-valeur="30 cm"
                         class="sr-only"
                         name="option-1"
                         checked=""
@@ -801,6 +811,8 @@
                       ><input
                         type="radio"
                         id="sel-option-0-1"
+                        data-axe="Longueur"
+                        data-valeur="1 m"
                         class="sr-only"
                         name="option-1"
                         value="Longueur : 1 m"
@@ -810,6 +822,8 @@
                       ><input
                         type="radio"
                         id="sel-option-0-2"
+                        data-axe="Longueur"
+                        data-valeur="50 cm"
                         class="sr-only"
                         name="option-1"
                         value="Longueur : 50 cm"
@@ -819,6 +833,8 @@
                       ><input
                         type="radio"
                         id="sel-option-0-3"
+                        data-axe="Longueur"
+                        data-valeur="45 cm"
                         class="sr-only"
                         name="option-1"
                         value="Longueur : 45 cm"
@@ -828,6 +844,8 @@
                       ><input
                         type="radio"
                         id="sel-option-0-4"
+                        data-axe="Longueur"
+                        data-valeur="40 cm"
                         class="sr-only"
                         name="option-1"
                         value="Longueur : 40 cm"
@@ -837,6 +855,8 @@
                       ><input
                         type="radio"
                         id="sel-option-0-5"
+                        data-axe="Longueur"
+                        data-valeur="33 cm"
                         class="sr-only"
                         name="option-1"
                         value="Longueur : 33 cm"
@@ -846,6 +866,8 @@
                       ><input
                         type="radio"
                         id="sel-option-0-6"
+                        data-axe="Longueur"
+                        data-valeur="25 cm"
                         class="sr-only"
                         name="option-1"
                         value="Longueur : 25 cm"
@@ -861,6 +883,8 @@
                       ><input
                         type="radio"
                         id="sel-option-1-0"
+                        data-axe="Conditionnement"
+                        data-valeur="Lot de 40 filets"
                         class="sr-only"
                         name="option-2"
                         checked=""
@@ -871,6 +895,8 @@
                       ><input
                         type="radio"
                         id="sel-option-1-1"
+                        data-axe="Conditionnement"
+                        data-valeur="Palette (2 stères)"
                         class="sr-only"
                         name="option-2"
                         value="Conditionnement : Palette (2 stères)"
@@ -880,6 +906,8 @@
                       ><input
                         type="radio"
                         id="sel-option-1-2"
+                        data-axe="Conditionnement"
+                        data-valeur="Palette (2,5 stères)"
                         class="sr-only"
                         name="option-2"
                         value="Conditionnement : Palette (2,5 stères)"
@@ -889,6 +917,8 @@
                       ><input
                         type="radio"
                         id="sel-option-1-3"
+                        data-axe="Conditionnement"
+                        data-valeur="Palette (2,6 stères)"
                         class="sr-only"
                         name="option-2"
                         value="Conditionnement : Palette (2,6 stères)"
@@ -898,6 +928,8 @@
                       ><input
                         type="radio"
                         id="sel-option-1-4"
+                        data-axe="Conditionnement"
+                        data-valeur="Palette (2,7 stères)"
                         class="sr-only"
                         name="option-2"
                         value="Conditionnement : Palette (2,7 stères)"
@@ -907,6 +939,8 @@
                       ><input
                         type="radio"
                         id="sel-option-1-5"
+                        data-axe="Conditionnement"
+                        data-valeur="Palette (2,9 stères)"
                         class="sr-only"
                         name="option-2"
                         value="Conditionnement : Palette (2,9 stères)"
@@ -916,6 +950,8 @@
                       ><input
                         type="radio"
                         id="sel-option-1-6"
+                        data-axe="Conditionnement"
+                        data-valeur="Palette (3 stères)"
                         class="sr-only"
                         name="option-2"
                         value="Conditionnement : Palette (3 stères)"
@@ -925,6 +961,8 @@
                       ><input
                         type="radio"
                         id="sel-option-1-7"
+                        data-axe="Conditionnement"
+                        data-valeur="Palette (3,3 stères)"
                         class="sr-only"
                         name="option-2"
                         value="Conditionnement : Palette (3,3 stères)"
@@ -934,6 +972,8 @@
                       ><input
                         type="radio"
                         id="sel-option-1-8"
+                        data-axe="Conditionnement"
+                        data-valeur="Vrac — 4 stères"
                         class="sr-only"
                         name="option-2"
                         value="Conditionnement : Vrac — 4 stères"
@@ -1195,7 +1235,7 @@
                   Cette combinaison n’est pas proposée : choisissez une autre option.
                 </p>
                 <div class="mt-5 grid gap-3">
-                  <a class="btn btn-primary w-full text-base" href="../panier.html"
+                  <a data-panier="commander" class="btn btn-primary w-full text-base" href="../panier.html"
                     ><span class="nojs-label-default">Commander</span
                     ><span class="nojs-label-variant nojs-label-nojs-v-0">Commander</span
                     ><span class="nojs-label-variant nojs-label-nojs-v-1">Commander</span
@@ -1206,8 +1246,15 @@
                     ><span class="nojs-label-variant nojs-label-nojs-v-6">Commander</span
                     ><span class="nojs-label-variant nojs-label-nojs-v-7">Commander</span
                     ><span class="nojs-label-variant nojs-label-nojs-v-8">Commander</span></a
-                  ><a class="btn btn-outline w-full" href="../panier.html">Ajouter au panier</a>
+                  ><a data-panier="ajouter" class="btn btn-outline w-full" href="../panier.html">Ajouter au panier</a>
                 </div>
+                <p
+                  data-panier-confirmation="true"
+                  hidden=""
+                  class="mt-4 rounded-lg bg-forest-50 p-4 text-sm font-medium text-forest-800"
+                >
+                  Ajouté au panier. <a class="font-semibold underline" href="../panier.html">Voir le panier</a>
+                </p>
               </div>
             </div>
           </div>
@@ -1767,5 +1814,6 @@
         ></path></svg
       ><span class="hidden text-sm font-semibold md:inline">WhatsApp</span></a
     >
+    <script src="../js/panier.js" defer></script>
   </body>
 </html>

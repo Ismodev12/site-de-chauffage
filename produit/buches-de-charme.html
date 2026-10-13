@@ -8,38 +8,13 @@
     <meta name="theme-color" content="#2a1c13" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-    <title>Bûches de charme | ERP Bois de Chauffage</title>
-    <meta
-      name="description"
-      content="Bois de chauffage en bûches de charme, en 25 cm, proposé en palette. Commande en ligne, livraison selon destination. À partir de 404,90 € / palette."
-    />
-    <meta name="application-name" content="ERP Bois de Chauffage" />
-    <link rel="canonical" href="https://www.votre-domaine.fr/produit/buches-de-charme" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta property="og:title" content="Bûches de charme" />
-    <meta
-      property="og:description"
-      content="Bois de chauffage en bûches de charme, en 25 cm, proposé en palette. Commande en ligne, livraison selon destination. À partir de 404,90 € / palette."
-    />
-    <meta property="og:url" content="https://www.votre-domaine.fr/produit/buches-de-charme" />
-    <meta property="og:site_name" content="ERP Bois de Chauffage" />
-    <meta property="og:locale" content="fr_FR" />
-    <meta property="og:image" content="https://www.votre-domaine.fr/images/catalogue/bois-fendu-1.jpg" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Bûches de charme" />
-    <meta
-      name="twitter:description"
-      content="Bois de chauffage en bûches de charme, en 25 cm, proposé en palette. Commande en ligne, livraison selon destination. À partir de 404,90 € / palette."
-    />
-    <meta name="twitter:image" content="https://www.votre-domaine.fr/images/catalogue/bois-fendu-1.jpg" />
-    <link rel="icon" href="../icon.svg" sizes="any" type="image/svg+xml" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&amp;family=Inter:wght@100..900&amp;display=swap"
     />
   </head>
   <body class="flex min-h-full flex-col font-sans">
+    <div hidden=""><template id="B:0"></template></div>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -247,7 +222,12 @@
             >
               <path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h9.2a1 1 0 0 0 1-.8L20 8H6.2"></path>
               <circle cx="9" cy="20" r="1.3"></circle>
-              <circle cx="17" cy="20" r="1.3"></circle></svg></a
+              <circle cx="17" cy="20" r="1.3"></circle></svg
+            ><span
+              data-panier-compteur="true"
+              hidden=""
+              class="absolute right-1 top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-ember-600 px-1 text-xs font-bold text-white"
+            ></span></a
           ><label
             for="menu-mobile-toggle"
             class="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full text-bark-900 hover:bg-cream-200 lg:hidden"
@@ -665,7 +645,10 @@
           </p>
           <p class="mt-2 text-bark-800">À partir de <strong class="text-xl">404,90 €</strong> / palette</p>
           <div class="mt-6">
-            <div class="nojs-order">
+            <div
+              class="nojs-order"
+              data-panier-produit='{"slug":"buches-de-charme","name":"Bûches de charme","image":"/images/catalogue/bois-fendu-1.jpg","kind":"unit","axes":[],"variants":[{"id":"25-cm-palette","options":{"Longueur":"25 cm","Conditionnement":"Palette"},"label":"25 cm · Palette","price":404.9,"unit":{"singulier":"palette","pluriel":"palettes"},"steres":null}]}'
+            >
               <style>
                 .nojs-combo,
                 .nojs-label-variant {
@@ -731,11 +714,18 @@
                   Cette combinaison n’est pas proposée : choisissez une autre option.
                 </p>
                 <div class="mt-5 grid gap-3">
-                  <a class="btn btn-primary w-full text-base" href="../panier.html"
+                  <a data-panier="commander" class="btn btn-primary w-full text-base" href="../panier.html"
                     ><span class="nojs-label-default">Commander</span
                     ><span class="nojs-label-variant nojs-label-nojs-v-0">Commander</span></a
-                  ><a class="btn btn-outline w-full" href="../panier.html">Ajouter au panier</a>
+                  ><a data-panier="ajouter" class="btn btn-outline w-full" href="../panier.html">Ajouter au panier</a>
                 </div>
+                <p
+                  data-panier-confirmation="true"
+                  hidden=""
+                  class="mt-4 rounded-lg bg-forest-50 p-4 text-sm font-medium text-forest-800"
+                >
+                  Ajouté au panier. <a class="font-semibold underline" href="../panier.html">Voir le panier</a>
+                </p>
               </div>
             </div>
           </div>
@@ -1021,6 +1011,7 @@
           </div>
         </div>
       </section>
+      <template id="B:1"></template>
     </main>
     <footer class="mt-auto bg-bark-950 pb-24 text-cream-200 md:pb-0" data-testid="pied-de-page">
       <div class="container-page grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1.2fr_1.3fr]">
@@ -1237,6 +1228,39 @@
           d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.4 5 5.2-1.4A9.9 9.9 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.1.82.83-3-.2-.31a8.2 8.2 0 1 1 6.97 3.82Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.22-.08-.39-.12-.55.12-.16.25-.63.8-.78.97-.14.16-.29.18-.53.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.72-1.33.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.66.31 2.77 2.77 0 0 0-.86 2.06c0 1.21.88 2.39 1 2.55.13.16 1.74 2.66 4.22 3.73 1.57.68 2.18.74 2.97.62.48-.07 1.46-.6 1.67-1.17.2-.58.2-1.07.14-1.17-.06-.11-.22-.17-.47-.29Z"
         ></path></svg
       ><span class="hidden text-sm font-semibold md:inline">WhatsApp</span></a
-    >
+    ><title>Bûches de charme | ERP Bois de Chauffage</title
+    ><meta
+      name="description"
+      content="Bois de chauffage en bûches de charme, en 25 cm, proposé en palette. Commande en ligne, livraison selon destination. À partir de 404,90 € / palette."
+    /><meta name="application-name" content="ERP Bois de Chauffage" /><link
+      rel="canonical"
+      href="https://www.votre-domaine.fr/produit/buches-de-charme"
+    /><meta name="format-detection" content="telephone=no" /><meta
+      property="og:title"
+      content="Bûches de charme"
+    /><meta
+      property="og:description"
+      content="Bois de chauffage en bûches de charme, en 25 cm, proposé en palette. Commande en ligne, livraison selon destination. À partir de 404,90 € / palette."
+    /><meta property="og:url" content="https://www.votre-domaine.fr/produit/buches-de-charme" /><meta
+      property="og:site_name"
+      content="ERP Bois de Chauffage"
+    /><meta property="og:locale" content="fr_FR" /><meta
+      property="og:image"
+      content="https://www.votre-domaine.fr/images/catalogue/bois-fendu-1.jpg"
+    /><meta property="og:type" content="website" /><meta name="twitter:card" content="summary_large_image" /><meta
+      name="twitter:title"
+      content="Bûches de charme"
+    /><meta
+      name="twitter:description"
+      content="Bois de chauffage en bûches de charme, en 25 cm, proposé en palette. Commande en ligne, livraison selon destination. À partir de 404,90 € / palette."
+    /><meta name="twitter:image" content="https://www.votre-domaine.fr/images/catalogue/bois-fendu-1.jpg" /><link
+      rel="icon"
+      href="../icon.svg"
+      sizes="any"
+      type="image/svg+xml"
+    />
+    <div hidden id="S:1"></div>
+    <div hidden id="S:0"></div>
+    <script src="../js/panier.js" defer></script>
   </body>
 </html>
