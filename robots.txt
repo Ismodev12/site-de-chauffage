@@ -1,0 +1,9 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /panier
+Disallow: /commande
+Disallow: /merci
+Disallow: /admin
+
+Sitemap: https://www.votre-domaine.fr/sitemap.xml

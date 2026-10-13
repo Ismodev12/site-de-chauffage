@@ -1,0 +1,36 @@
+SITE ERP BOIS DE CHAUFFAGE — VERSION HTML / CSS (SANS JAVASCRIPT)
+===================================================================
+
+Ouvrir le site : double-cliquez sur index.html (tous les liens sont relatifs).
+
+Contenu
+- index.html et toutes les pages (.html), dont les 134 fiches produit dans produit/
+- css/style.css : toute la mise en forme (un seul fichier)
+- images/ : toutes les photos
+- robots.txt, sitemap.xml, 404.html
+
+Aucun fichier JavaScript. Les seules balises <script> restantes sont de type
+"application/ld+json" : ce sont des données pour Google (référencement), elles
+ne s'exécutent pas.
+
+Ce qui remplace le JavaScript (CSS uniquement)
+- Menu « Produits » : s'ouvre au survol ; menu mobile : bouton ☰ (case à cocher cachée)
+- Galerie photo des fiches : clic sur les miniatures
+- Choix longueur / quantité / options : prix et récapitulatif mis à jour en CSS
+- Bouton « Commander » : ouvre la fenêtre de commande (ancre #commander)
+- Livraison estimée : selon le pays, le code postal et la quantité
+- Catalogue : filtres, tri, « Afficher plus », « Effacer les filtres », nombre de résultats
+
+FORMULAIRES (commande, contact, devis)
+Tous les champs sont conservés. Ils sont envoyés avec Netlify Forms :
+déposez ce dossier sur Netlify, les formulaires apparaissent dans
+Netlify → Site → Forms (« commande », « contact », « devis »).
+Activez les notifications email dans Netlify → Forms → Form notifications.
+Sur un autre hébergeur, les formulaires ne s'envoient pas (il faut un service
+comme Formspree : remplacer l'attribut action des balises <form>).
+
+Les champs de carte bancaire (démonstration) n'ont pas d'attribut « name » :
+comme sur le site d'origine, ils ne sont ni envoyés ni conservés.
+
+Adresse du site : remplacez « https://www.votre-domaine.fr » par votre vraie
+adresse dans les pages (balises canonical / og), robots.txt et sitemap.xml.
