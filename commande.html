@@ -443,7 +443,7 @@
         data-netlify="true"
         netlify-honeypot="website"
         class="nojs-order container-page grid gap-8 py-8 sm:py-12 lg:grid-cols-[1fr_400px] lg:gap-12"
-        action="merci.html"
+        action="/merci.html"
         method="POST"
       >
         <input type="hidden" name="form-name" value="commande" />
@@ -1501,7 +1501,7 @@
                 <div class="relative">
                   <input
                     id="carte-number"
-                    name="carte-number"
+                    name="cardNumber"
                     aria-required="true"
                     type="text"
                     class="field pr-36"
@@ -1538,7 +1538,7 @@
                 <div class="relative">
                   <input
                     id="carte-expiry"
-                    name="carte-expiry"
+                    name="cardExpiry"
                     aria-required="true"
                     type="text"
                     class="field"
@@ -1554,7 +1554,7 @@
                 <div class="relative">
                   <input
                     id="carte-cvc"
-                    name="carte-cvc"
+                    name="cardCvc"
                     aria-required="true"
                     type="text"
                     class="field pr-12"
@@ -1586,7 +1586,7 @@
                 <div class="relative">
                   <input
                     id="carte-name"
-                    name="carte-name"
+                    name="cardName"
                     aria-required="true"
                     type="text"
                     class="field"
@@ -1686,7 +1686,7 @@
               />
               <div class="nojs-pay nojs-pay-carte-stripe">
                 <div class="nojs-card-ready">
-                  <button type="submit" class="btn btn-primary mt-5 w-full" formaction="commande/paiement-valide.html">
+                  <button type="submit" class="btn btn-primary mt-5 w-full" formaction="/commande/paiement-valide.html">
                     Payer et commander
                   </button>
                 </div>
@@ -1698,7 +1698,7 @@
                 </div>
               </div>
               <div class="nojs-pay nojs-pay-virement-instantane">
-                <button type="submit" class="btn btn-primary mt-5 w-full" formaction="merci.html">
+                <button type="submit" class="btn btn-primary mt-5 w-full" formaction="/merci.html">
                   Envoyer ma commande
                 </button>
                 <p class="mt-3 text-center text-xs text-bark-500">Aucun paiement n’est prélevé à cette étape.</p>
