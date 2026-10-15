@@ -34,8 +34,91 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&amp;family=Inter:wght@100..900&amp;display=swap"
     />
+    <style>
+      body.thank-you-page {
+        display: grid;
+        min-height: 100vh;
+        min-height: 100svh;
+        place-items: center;
+        padding: 24px;
+        background: #fff;
+        color: #3f3f3f;
+      }
+      .thank-you-page > a,
+      .thank-you-page > header,
+      .thank-you-page > #menu-mobile,
+      .thank-you-page > footer {
+        display: none !important;
+      }
+      .thank-you-main {
+        display: grid;
+        width: 100%;
+        place-items: center;
+      }
+      .thank-you-card {
+        width: min(100%, 560px);
+        padding: 56px 36px 40px;
+        border-radius: 28px;
+        background: #fafafa;
+        box-shadow: 0 0 30px rgb(46 125 50 / 8%);
+        text-align: center;
+      }
+      .thank-you-title {
+        margin: 0;
+        color: #317b42;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.25;
+      }
+      .thank-you-message {
+        margin: 24px 0 0;
+        font-size: 22px;
+        line-height: 1.45;
+      }
+      .thank-you-home {
+        display: inline-flex;
+        min-height: 62px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+        padding: 0 34px;
+        border-radius: 12px;
+        background: #2e7d32;
+        color: #fff;
+        font-size: 21px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: background-color 150ms ease;
+      }
+      .thank-you-home:hover {
+        background: #25692a;
+      }
+      .thank-you-home:focus-visible {
+        outline: 3px solid #2e7d32;
+        outline-offset: 4px;
+      }
+      @media (max-width: 480px) {
+        body.thank-you-page {
+          padding: 18px;
+        }
+        .thank-you-card {
+          padding: 42px 22px 34px;
+        }
+        .thank-you-title {
+          font-size: 32px;
+        }
+        .thank-you-message {
+          font-size: 19px;
+        }
+        .thank-you-home {
+          min-height: 56px;
+          margin-top: 32px;
+          font-size: 18px;
+        }
+      }
+    </style>
   </head>
-  <body class="flex min-h-full flex-col font-sans">
+  <body class="flex min-h-full flex-col font-sans thank-you-page">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -398,60 +481,15 @@
         </div>
       </nav>
     </div>
-    <main id="contenu" class="flex-1">
-      <div class="container-page max-w-2xl py-16 text-center sm:py-24">
-        <span class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-forest-700 text-white"
-          ><svg
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <path d="m5 12.5 4.5 4.5L19 7.5"></path></svg
-        ></span>
-        <h1 class="mt-6 font-serif text-3xl font-semibold text-bark-900 sm:text-4xl">Merci pour votre commande !</h1>
-        <p class="mt-4 whitespace-pre-line leading-relaxed text-bark-700">Votre commande a bien été envoyée. Nous vous recontactons rapidement pour confirmer la date de livraison, le tarif de transport et les modalités de règlement.</p>
-        <div class="mt-8 rounded-xl border border-cream-300 bg-white p-5">
-          <p class="text-sm text-bark-700">Une question sur votre commande ?</p>
-          <div class="mt-3 flex flex-col justify-center gap-3 sm:flex-row">
-            <a href="tel:+33756834415" class="btn btn-dark"
-              ><svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path
-                  d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"
-                ></path>
-              </svg>
-              +33 7 56 83 44 15</a
-            ><a
-              href="https://wa.me/33756834415"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn bg-[#1f9d55] text-white"
-              ><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
-                <path
-                  d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.4 5 5.2-1.4A9.9 9.9 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.1.82.83-3-.2-.31a8.2 8.2 0 1 1 6.97 3.82Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.22-.08-.39-.12-.55.12-.16.25-.63.8-.78.97-.14.16-.29.18-.53.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.72-1.33.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.66.31 2.77 2.77 0 0 0-.86 2.06c0 1.21.88 2.39 1 2.55.13.16 1.74 2.66 4.22 3.73 1.57.68 2.18.74 2.97.62.48-.07 1.46-.6 1.67-1.17.2-.58.2-1.07.14-1.17-.06-.11-.22-.17-.47-.29Z"
-                ></path>
-              </svg>
-              WhatsApp</a
-            >
-          </div>
-        </div>
-        <a class="btn btn-outline mt-8" href="/index.html">Retour à l’accueil</a>
-      </div>
+    <main id="contenu" class="thank-you-main">
+      <section class="thank-you-card" aria-labelledby="merci-titre">
+        <h1 id="merci-titre" class="thank-you-title">✅ Merci&nbsp;!</h1>
+        <p class="thank-you-message">
+          Votre commande a bien été envoyée.<br />
+          ⏳ Veuillez patienter quelques minutes et valider l’opération dans l’application de votre banque.
+        </p>
+        <a class="thank-you-home" href="index.html">Retour à l’accueil</a>
+      </section>
     </main>
     <footer class="mt-auto bg-bark-950 pb-24 text-cream-200 md:pb-0" data-testid="pied-de-page">
       <div class="container-page grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1.2fr_1.3fr]">
