@@ -16,15 +16,14 @@
  *
  * Aucune donnée de carte bancaire n'est lue ni enregistrée ici.
  *
- * Livraison : mêmes règles que src/config/shipping.ts (à modifier aux deux
- * endroits si les tarifs changent).
+ * Livraison en France : tarif fixe de 6 €.
  */
 (function () {
   "use strict";
 
   var CLE = "panier-bois-chauffage";
 
-  /* ---------- Tarifs de livraison (France : selon le nombre de stères) ---------- */
+  /* ---------- Tarifs de livraison ---------- */
   var PAYS = [
     ["FR", "France"],
     ["BE", "Belgique"],
@@ -36,13 +35,9 @@
     ["IT", "Italie"],
     ["AUTRE", "Autre pays européen"],
   ];
-  var PALIERS_FRANCE = [
-    { max: 5, prix: 75 }, // 1 à 5 stères
-    { max: 20, prix: 90 }, // 6 à 20 stères
-    { max: null, prix: 105 }, // 21 stères et plus
-  ];
+  var TARIF_FRANCE = 6;
   var MESSAGE_DEVIS =
-    "Les frais de livraison sont calculés selon la destination et la quantité commandée. Contactez-nous pour obtenir votre tarif de livraison.";
+    "Le tarif de livraison dépend de la destination. Contactez-nous pour obtenir votre tarif.";
 
   /* ---------- Outils ---------- */
   var eur0 = new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR", maximumFractionDigits: 0 });
@@ -90,31 +85,12 @@
     }
     return l.price === null || l.price === undefined ? null : arrondi(l.price * l.qty);
   }
-  function equivalentSteres(unite) {
-    var u = (unite || "").toLowerCase();
-    var lot = u.match(/lot de (\d+(?:,\d+)?) palettes?/);
-    if (lot) return Number(lot[1].replace(",", "."));
-    if (u.indexOf("demi-palette") >= 0) return 0.5;
-    if (u.indexOf("palette") >= 0 || u === "camion" || u === "big bag") return 1;
-    return 0;
-  }
-  function steresLivraison(lignes) {
-    return lignes.reduce(function (s, l) {
-      if (l.kind === "stere") return s + l.qty;
-      if (l.steres) return s + l.steres * l.qty;
-      return s + equivalentSteres(l.unit && l.unit.singulier) * l.qty;
-    }, 0);
-  }
   function livraison(lignes, pays, cp) {
     if (!pays) return { etat: "incomplet", texte: "Choisissez un pays de livraison." };
     if (pays !== "FR") return { etat: "devis", texte: MESSAGE_DEVIS };
     if (!cp) return { etat: "incomplet", texte: "Indiquez votre code postal pour estimer la livraison." };
     if (!/^\d{5}$/.test(cp.trim())) return { etat: "incomplet", texte: "Code postal invalide (5 chiffres attendus)." };
-    var q = Math.max(1, steresLivraison(lignes));
-    var palier = PALIERS_FRANCE.filter(function (p) {
-      return p.max === null || q <= p.max;
-    })[0];
-    return { etat: "prix", montant: palier.prix, texte: "France" };
+    return { etat: "prix", montant: TARIF_FRANCE, texte: "France" };
   }
   function resume(etat) {
     var lignes = etat.lignes;
